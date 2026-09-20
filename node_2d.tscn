@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://3s87ky52fn7d"]
+
+[ext_resource type="Script" uid="uid://b5yq8eepcwh1a" path="res://node_2d.gd" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=492256585]
+script = ExtResource("1_wtcfe")
