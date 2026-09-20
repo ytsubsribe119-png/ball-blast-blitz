@@ -23,8 +23,6 @@ jobs:
 
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
-        with:
-          cmdline-tools-version: "11076708_latest"
 
       - name: Godot Android Export
         uses: firebelley/godot-export@v6.0.0
