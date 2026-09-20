@@ -29,10 +29,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
         with:
-          packages: 'platform-tools'
+          packages: 'platform-tools build-tools;34.0.0 platforms;android-34'
 
       - name: Godot Android Export
         uses: firebelley/godot-export@v7.0.0
+        env:
+          ANDROID_HOME: ${{ steps.setup-android.outputs.android-sdk-root }}
         with:
           godot_executable_download_url: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_linux.x86_64.zip
           godot_export_templates_download_url: https://github.com/godotengine/godot/releases/download/4.2.2-stable/Godot_v4.2.2-stable_export_templates.tpz
